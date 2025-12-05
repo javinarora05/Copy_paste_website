@@ -1,4 +1,4 @@
-#📋 Copy-Paste Helper (Clipboard API)
+#📋 **Copy-Paste Helper (Clipboard API)**
 
 A simple, clean, and modern web tool that lets you copy and paste text directly using the Navigator Clipboard API.
 Built using HTML, CSS, and JavaScript, this mini-app provides a smooth user experience with animated UI elements and clear status messages.
