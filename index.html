@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy-Paste Helper (Clipboard API)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="icon">✓</div>
+                <h1>Copy-Paste Helper</h1>
+            </div>
+            
+            <div class="content">
+                <div class="textarea-wrapper">
+                    <label for="textArea">Your Text:</label>
+                    <textarea 
+                        id="textArea" 
+                        placeholder="Type or paste your text here..."
+                        rows="10"
+                    ></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button id="copyBtn" class="btn btn-copy">
+                        <span class="btn-icon">📋</span>
+                        Copy Text
+                    </button>
+                    <button id="pasteBtn" class="btn btn-paste">
+                        <span class="btn-icon">📥</span>
+                        Paste Text
+                    </button>
+                </div>
+                
+                <div id="statusMessage" class="status-message"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

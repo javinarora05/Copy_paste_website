@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #51BBFE 0%, #8FF7A7 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(117, 119, 97, 0.3);
+    overflow: hidden;
+    animation: slideIn 0.5s ease-out;
+    border: 2px solid #F4E76E;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    background: linear-gradient(135deg, #51BBFE 0%, #8FF7A7 100%);
+    color: #757761;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: rgba(117, 119, 97, 0.3);
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+    color: #757761;
+    border: 2px solid #757761;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: #757761;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 1;
+    font-weight: 700;
+    color: #757761;
+}
+
+.content {
+    padding: 30px;
+}
+
+.textarea-wrapper {
+    margin-bottom: 25px;
+}
+
+.textarea-wrapper label {
+    display: block;
+    font-weight: 700;
+    color: #757761;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#textArea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #F4E76E;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    resize: vertical;
+    transition: all 0.3s ease;
+    background: #F4E76E;
+    color: #757761;
+}
+
+#textArea:focus {
+    outline: none;
+    border-color: #51BBFE;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(81, 187, 254, 0.2);
+}
+
+#textArea::placeholder {
+    color: #757761;
+    opacity: 0.6;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(117, 119, 97, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-icon {
+    font-size: 20px;
+}
+
+.btn-copy {
+    background: linear-gradient(135deg, #51BBFE 0%, #8FF7A7 100%);
+    color: #757761;
+}
+
+.btn-copy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(81, 187, 254, 0.4);
+}
+
+.btn-copy:active {
+    transform: translateY(0);
+}
+
+.btn-paste {
+    background: linear-gradient(135deg, #F7FE72 0%, #F4E76E 100%);
+    color: #757761;
+}
+
+.btn-paste:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(247, 254, 114, 0.4);
+}
+
+.btn-paste:active {
+    transform: translateY(0);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.status-message {
+    min-height: 40px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.status-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.status-message.success {
+    background: #8FF7A7;
+    color: #757761;
+    border: 1px solid #51BBFE;
+}
+
+.status-message.error {
+    background: #F7FE72;
+    color: #757761;
+    border: 1px solid #F4E76E;
+}
+
+.status-message.info {
+    background: #51BBFE;
+    color: #757761;
+    border: 1px solid #8FF7A7;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .header h1 {
+        font-size: 24px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+}
+
