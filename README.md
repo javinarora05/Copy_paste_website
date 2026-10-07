@@ -1,77 +1,20 @@
-#📋 **Copy-Paste Helper (Clipboard API)**
+# 📋 Copy-Paste Helper
 
-A simple, clean, and modern web tool that lets you copy and paste text directly using the Navigator Clipboard API.
-Built using HTML, CSS, and JavaScript, this mini-app provides a smooth user experience with animated UI elements and clear status messages.
+> A lightweight browser tool for copying and pasting text with the modern Clipboard API.
 
-🚀 Features
+## ✨ Features
+- Copy with `navigator.clipboard.writeText()`
+- Paste with `navigator.clipboard.readText()`
+- Live success/error feedback
+- Responsive UI
+- Fully client-side
 
-  ✏️ Editable Text Area – Type or paste any text.
-  📋 Copy to Clipboard – Uses navigator.clipboard.writeText() to copy.
-  📥 Paste from Clipboard – Uses navigator.clipboard.readText() to paste.
-  ✅ Live Status Messages – Shows success/error messages.
-  🎨 Modern UI – Gradient backgrounds, animations, responsive layout.
-  📱 Mobile Friendly – Fully responsive for small screens.
+## 🧰 Tech
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-📁 Project Structure
-/
-├── index.html      # Main interface markup
-├── styles.css      # UI styling and animations
-└── script.js       # Clipboard API logic (copy/paste)
+## ▶️ Use
+Open `index.html` in a modern browser. Clipboard access generally requires HTTPS or localhost.
 
-🧩 How It Works
-Clipboard — Copy
-
-Your script.js calls the modern async Clipboard API:
-
-await navigator.clipboard.writeText(text);
-
-Clipboard — Paste
-const text = await navigator.clipboard.readText();
-
-
-Both features are wrapped in try–catch blocks and display a status message to the user.
-
-
-script
-
-📦 Installation & Usage
-🔧 Option 1 — Open Locally
-
-Download the repository.
-
-Open index.html in any modern browser (Chrome, Edge, Firefox, Safari).
-
-Done — everything runs client-side!
-
-🌐 Option 2 — Host on GitHub Pages
-
-Upload the files to GitHub.
-
-Go to Settings → Pages.
-
-Choose the main branch and root folder.
-
-Your site will be live!
-
-🔐 Browser Requirements
-
-The Clipboard API requires:
-
-HTTPS or localhost
-
-Modern browsers (Chrome 66+, Edge 79+, Safari 13+, Firefox 63+)
-
-🛠️ Technologies Used
-
-HTML5 — Structure
-
-CSS3 — UI, gradients, animations
-
-JavaScript (ES6) — Clipboard API
-
-Navigator Clipboard API (writeText, readText)
-
-📜 License
-
-This project is open-source and free to use.
-Feel free to modify, improve, or integrate it into your own apps!
+Built by **Javin Arora**.
